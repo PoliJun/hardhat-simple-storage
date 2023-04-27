@@ -6,6 +6,7 @@ typechain
 typechain-types
 .prettierrc
 README.md
+yarn-error.log
 
 
 # Hardhat files
