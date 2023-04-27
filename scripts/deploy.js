@@ -23,6 +23,7 @@ async function main() {
 
     // if process.env.ETHERSCAN_API_KEY exists then it's true, otherwise it's false
     if (network.config.chainId === 5 && process.env.ETHERSCAN_API_KEY) {
+        console.log("Wainting for block txes...")
         await simpleStorage.deployTransaction.wait(6) // wait for at most 6 blocks in case of waiting for blocks behind to complete
         await verify(simpleStorage.address, [])
     }
