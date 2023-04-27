@@ -1,10 +1,12 @@
-const { ethers } = require("hardhat")
-const { assert, expect } = require("chai")
+import { ethers } from "hardhat"
+import { assert, expect } from "chai"
 
-function testFunct() {}
+// function testFunct() {}
 describe("SimpleStorage", function () {
     let simpleStorageFactory
-    let simpleStorage
+    let simpleStorage // we are calling function not exactly do on the contract, the typing of Contract is
+    // not our contract,so it does't have all functions
+    // then we use typechain
     beforeEach(async function () {
         simpleStorageFactory = await ethers.getContractFactory("SimpleStorage")
         simpleStorage = await simpleStorageFactory.deploy()
