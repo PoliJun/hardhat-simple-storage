@@ -17,6 +17,12 @@ module.exports = {
             accounts: [PRIVATE_KEY], // this should be accounts rather than account!
             chainId: 5,
         },
+        // yarn hardhat node to enable a localhost connection
+        localhost:{
+          url:"http://localhost:8545",
+          // accounts: Thanks hardhat
+          chainId:31337,
+        }
     },
     solidity: "0.8.18",
     etherscan: {

@@ -15,7 +15,7 @@ async function main() {
     // where is the rpc url
     console.log(`Deployed contract ${simpleStorage.address}`)
     // what happens when we deploy the contract to hardhat network
-    // console.log(network.config)
+    console.log(network.config)
 
     // 4==4 -> true
     // 4=="4"->true
