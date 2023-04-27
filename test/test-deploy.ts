@@ -1,14 +1,17 @@
 import { ethers } from "hardhat"
 import { assert, expect } from "chai"
+import { SimpleStorage, SimpleStorage__factory } from "../typechain-types"
 
 // function testFunct() {}
 describe("SimpleStorage", function () {
-    let simpleStorageFactory
-    let simpleStorage // we are calling function not exactly do on the contract, the typing of Contract is
+    let simpleStorageFactory: SimpleStorage__factory
+    let simpleStorage: SimpleStorage // we are calling function not exactly do on the contract, the typing of Contract is
     // not our contract,so it does't have all functions
     // then we use typechain
     beforeEach(async function () {
-        simpleStorageFactory = await ethers.getContractFactory("SimpleStorage")
+        simpleStorageFactory = (await ethers.getContractFactory(
+            "SimpleStorage"
+        )) as SimpleStorage__factory
         simpleStorage = await simpleStorageFactory.deploy()
     })
 
